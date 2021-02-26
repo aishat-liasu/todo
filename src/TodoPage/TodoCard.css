@@ -1,0 +1,59 @@
+.todo-card {
+  display: flex;
+  padding: 5px 15px;
+  flex-direction: row;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  margin-bottom: 1%;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-card .todo-note {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.todo-input {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+.todo-input:focus {
+  outline: none;
+}
+.cardFunc {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: space-between;
+}
+.func {
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 1rem;
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+  .todo-card {
+    width: 90%;
+    padding: 5px 5px;
+  }
+  .todo-card .todo-note {
+    width: 65%;
+  }
+  .cardFunc {
+    width: 35%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+}

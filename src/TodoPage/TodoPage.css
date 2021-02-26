@@ -1,0 +1,87 @@
+.todo-list {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f2f4;
+  color: black;
+}
+.todo-form {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.todo-form input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 80%;
+}
+.todo-form input[type='text']:focus {
+  outline: none;
+}
+.add-todo-btn {
+  width: 20%;
+  border: 1px solid #ccc;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.todos,
+.in-progress,
+.done,
+.paused {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+.todos .todo-card {
+  background-color: #1d6b74;
+}
+.in-progress .todo-card {
+  background-color: #76aa60;
+}
+.done .todo-card {
+  background-color: #43a19d;
+}
+.paused .todo-card {
+  background-color: #7b7263;
+}
+.save-logout {
+  margin-top: 2.5%;
+}
+.save-btn,
+.logout-btn {
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 5px 15px;
+}
+.save-btn {
+  margin-right: 1rem;
+}
+.logout-btn {
+  margin-left: 1rem;
+}
+.btn:focus {
+  outline: none;
+  cursor: pointer;
+}
+.btn:active {
+  color: white;
+  border: 1px solid #76aa60;
+  background-color: #76aa60;
+}
+@media (min-width: 300px) and (max-width: 599px) {
+  .todo-form {
+    width: 90%;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+}
