@@ -39,14 +39,16 @@ const TodoPage = () => {
     thirdCl = [],
     fourthCl = [];
   userTodos.forEach((item) => {
-    if (item.is_completed === '0') {
-      firstCl.push(item);
-    } else if (item.is_completed === '1') {
-      secondCl.push(item);
-    } else if (item.is_completed === '2') {
-      thirdCl.push(item);
-    } else if (item.is_completed === '3') {
-      fourthCl.push(item);
+    if (item.delete_flag === '0') {
+      if (item.is_completed === '0') {
+        firstCl.push(item);
+      } else if (item.is_completed === '1') {
+        secondCl.push(item);
+      } else if (item.is_completed === '2') {
+        thirdCl.push(item);
+      } else if (item.is_completed === '3') {
+        fourthCl.push(item);
+      }
     }
   });
 

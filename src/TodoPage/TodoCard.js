@@ -15,9 +15,11 @@ const TodoCard = ({ item, id, todos, update }) => {
   };
 
   const delTodo = (id) => {
-    const newTodos = todos.filter((todo) => {
-      if (todo.id !== id) return true;
-      else return false;
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.delete_flag = '1';
+      }
+      return todo;
     });
     update(newTodos);
   };
