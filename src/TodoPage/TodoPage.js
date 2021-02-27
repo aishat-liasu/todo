@@ -116,9 +116,6 @@ const TodoPage = () => {
       headers: {
         'Content-Type': 'application/json',
         'API-KEY': 'TODO_BG_ygehfjdfbjhfeub83urj3urnuur83rn3',
-        Connection: 'keep-alive',
-        Accept: '*/*',
-        'Accept-Encoding': 'gzip, deflate, br',
       },
       body: JSON.stringify(todos),
     };
@@ -131,7 +128,7 @@ const TodoPage = () => {
     console.log(message);
   };
   const logoutPage = () => {
-    console.log('You have been successfully logged in');
+    console.log('You have been successfully logged out');
     history1.push({
       pathname: './logoutpage',
       data: location1.data.first_name,
