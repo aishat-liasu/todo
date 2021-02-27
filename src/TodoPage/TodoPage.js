@@ -193,7 +193,6 @@ const TodoPage = () => {
           </button>
         </div>
       </div>
-      );
     </div>
   );
 };
