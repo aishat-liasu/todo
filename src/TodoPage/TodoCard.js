@@ -48,7 +48,7 @@ const TodoCard = ({ item, id, todos, update }) => {
     });
     update(newTodos);
   };
-  console.log(item.item_note);
+
   return (
     <div className="todo-card" id={id}>
       <p className="todo-note">
