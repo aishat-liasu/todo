@@ -120,7 +120,7 @@ const TodoPage = () => {
         Accept: '*/*',
         'Accept-Encoding': 'gzip, deflate, br',
       },
-      body: todos,
+      body: JSON.stringify(todos),
     };
     fetch('https://todo-bg.herokuapp.com/index.php/api/todos/syncUp', sendData)
       .then((resp) => resp.json())
