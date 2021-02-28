@@ -155,25 +155,25 @@ const TodoPage = () => {
             Add Todo
           </button>
         </form>
-        {firstSeg && (
+        {firstSeg.length !== 0 && (
           <div className="todos">
             <h2>Todos</h2>
             {firstSeg}
           </div>
         )}
-        {secondSeg && (
+        {secondSeg.length !== 0 && (
           <div className="in-progress">
             <h2>In Progress</h2>
             {secondSeg}
           </div>
         )}
-        {thirdSeg && (
+        {thirdSeg.length !== 0 && (
           <div className="done">
             <h2>Done</h2>
             {thirdSeg}
           </div>
         )}
-        {fourthSeg && (
+        {fourthSeg.length !== 0 && (
           <div className="paused">
             <h2>Paused</h2>
             {fourthSeg}
