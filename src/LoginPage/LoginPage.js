@@ -60,6 +60,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page">
+      <h1>Hello, there...</h1>
       <form onSubmit={loginForm} className="login-form">
         <label htmlFor="user-email">
           Email

@@ -8,7 +8,7 @@ const TodoPage = () => {
   const history1 = useHistory();
   const [todos, updateTodos] = useState([]);
   const [todoInput, updatetodoInput] = useState('');
-  const [message, updateMessage] = useState('');
+  const [status, updateStatus] = useState('');
 
   useEffect(() => {
     const requestData = {
@@ -125,9 +125,11 @@ const TodoPage = () => {
       .then((resp) => resp.json())
       .then((todoMessage) => {
         console.log(todoMessage.status);
-        return updateMessage(todoMessage.message);
+        return updateStatus(todoMessage.status);
       });
-    console.log(message);
+    if (status === 1) {
+      alert('Todos sync is successful');
+    }
   };
   const logoutPage = () => {
     console.log('You have been successfully logged out');
@@ -136,6 +138,7 @@ const TodoPage = () => {
       data: location1.data.first_name,
     });
   };
+
   return (
     <div>
       <div className="todo-list">
@@ -152,37 +155,29 @@ const TodoPage = () => {
             Add Todo
           </button>
         </form>
-        {firstSeg.length !== 0 ? (
+        {firstSeg && (
           <div className="todos">
             <h2>Todos</h2>
             {firstSeg}
           </div>
-        ) : (
-          ''
         )}
-        {secondSeg.length !== 0 ? (
+        {secondSeg && (
           <div className="in-progress">
             <h2>In Progress</h2>
             {secondSeg}
           </div>
-        ) : (
-          ''
         )}
-        {thirdSeg.length !== 0 ? (
+        {thirdSeg && (
           <div className="done">
             <h2>Done</h2>
             {thirdSeg}
           </div>
-        ) : (
-          ''
         )}
-        {fourthSeg.length !== 0 ? (
+        {fourthSeg && (
           <div className="paused">
             <h2>Paused</h2>
             {fourthSeg}
           </div>
-        ) : (
-          ''
         )}
         <div className="save-logout">
           <button className="save-btn btn" type="submit" onClick={saveTodo}>
