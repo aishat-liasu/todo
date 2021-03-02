@@ -64,16 +64,16 @@ const TodoCard = ({ item, id, todos, update }) => {
         />
       </p>
       <div className="cardFunc">
-        <p className="func" onClick={() => delTodo(id)}>
+        <p title="Delete" className="func" onClick={() => delTodo(id)}>
           X
         </p>
-        <p className="func" onClick={() => todoIP(id)}>
+        <p title="In Progress" className="func" onClick={() => todoIP(id)}>
           IP
         </p>
-        <p className="func" onClick={() => todoDone(id)}>
+        <p title="Done" className="func" onClick={() => todoDone(id)}>
           D
         </p>
-        <p className="func" onClick={() => todoPaused(id)}>
+        <p itle="Paused" className="func" onClick={() => todoPaused(id)}>
           P
         </p>
       </div>
