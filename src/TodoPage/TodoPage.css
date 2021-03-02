@@ -62,12 +62,7 @@
   margin-bottom: 2rem;
   padding: 5px 15px;
 }
-.save-btn {
-  margin-right: 1rem;
-}
-.logout-btn {
-  margin-left: 1rem;
-}
+
 .btn:focus {
   outline: none;
   cursor: pointer;

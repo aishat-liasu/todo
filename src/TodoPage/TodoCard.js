@@ -52,7 +52,7 @@ const TodoCard = ({ item, id, todos, update }) => {
   };
 
   return (
-    <div className="todo-card" id={id}>
+    <div className="todo-card">
       <p className="todo-note">
         <input
           type="text"
@@ -73,7 +73,7 @@ const TodoCard = ({ item, id, todos, update }) => {
         <p title="Done" className="func" onClick={() => todoDone(id)}>
           D
         </p>
-        <p itle="Paused" className="func" onClick={() => todoPaused(id)}>
+        <p title="Paused" className="func" onClick={() => todoPaused(id)}>
           P
         </p>
       </div>
