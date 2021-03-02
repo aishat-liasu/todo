@@ -57,4 +57,10 @@
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
+  .todo-card .todo-note {
+    width: 65%;
+  }
+  .card-func {
+    width: 30%;
+  }
 }

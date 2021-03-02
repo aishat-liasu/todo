@@ -38,7 +38,7 @@ const TodoPage = () => {
     secondCl = [],
     thirdCl = [],
     fourthCl = [];
-  userTodos.forEach((item) => {
+  userTodos.reverse().forEach((item) => {
     if (item.delete_flag === '0') {
       if (item.is_completed === '0') {
         firstCl.push(item);
@@ -64,30 +64,18 @@ const TodoPage = () => {
     );
   }
 
-  const firstSeg = firstCl
-    .slice(0)
-    .reverse()
-    .map((item) => {
-      return returnTodoCard(item);
-    });
-  const secondSeg = secondCl
-    .slice(0)
-    .reverse()
-    .map((item) => {
-      return returnTodoCard(item);
-    });
-  const thirdSeg = thirdCl
-    .slice(0)
-    .reverse()
-    .map((item) => {
-      return returnTodoCard(item);
-    });
-  const fourthSeg = fourthCl
-    .slice(0)
-    .reverse()
-    .map((item) => {
-      return returnTodoCard(item);
-    });
+  const firstSeg = firstCl.map((item) => {
+    return returnTodoCard(item);
+  });
+  const secondSeg = secondCl.map((item) => {
+    return returnTodoCard(item);
+  });
+  const thirdSeg = thirdCl.map((item) => {
+    return returnTodoCard(item);
+  });
+  const fourthSeg = fourthCl.map((item) => {
+    return returnTodoCard(item);
+  });
 
   const addTodo = (e) => {
     e.preventDefault();

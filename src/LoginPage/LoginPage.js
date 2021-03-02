@@ -33,28 +33,29 @@ const LoginPage = () => {
 
     let boolean1 = false,
       boolean2 = false;
-    users.forEach((user) => {
-      if (user.email === email && user.password === password) {
-        boolean1 = true;
-        user1 = user;
-      } else if (user.email === email && user.password !== password) {
-        boolean2 = true;
-      }
-    });
-
-    console.log(users);
-    if (boolean1) {
-      console.log('You have been successfully logged in');
-      history.push({
-        pathname: './todopage',
-        data: user1,
+    if (users.length === 0) {
+      alert('Kindly wait for the site to load');
+    } else {
+      users.forEach((user) => {
+        if (user.email === email && user.password === password) {
+          boolean1 = true;
+          user1 = user;
+        } else if (user.email === email && user.password !== password) {
+          boolean2 = true;
+        }
       });
-    }
-    if (boolean2) {
-      alert('Wrong Password');
-    }
-    if (!boolean2 && !boolean1) {
-      alert('Kinldy wait for the site to load');
+      console.log(users.length);
+      if (boolean1) {
+        console.log('You have been successfully logged in');
+        history.push({
+          pathname: './todopage',
+          data: user1,
+        });
+      } else if (boolean2) {
+        alert('Wrong Password');
+      } else {
+        alert('Login detail is incorrect');
+      }
     }
   };
 
