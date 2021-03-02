@@ -52,15 +52,13 @@
 .paused .todo-card {
   background-color: #7b7263;
 }
-.save-logout {
-  margin-top: 2.5%;
-}
-.save-btn,
+
 .logout-btn,
 .login-back-btn {
   border: 1px solid #ccc;
   font-size: 1.1rem;
   border-radius: 10px;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 5px 15px;
 }

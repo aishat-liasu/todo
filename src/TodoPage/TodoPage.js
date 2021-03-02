@@ -99,8 +99,7 @@ const TodoPage = () => {
     }
   };
 
-  console.log(userTodos);
-  const saveTodo = () => {
+  const logoutPage = () => {
     const sendData = {
       method: 'POST',
       headers: {
@@ -117,14 +116,14 @@ const TodoPage = () => {
       });
     if (status === 1) {
       alert('Todos sync is successful');
+      console.log('You have been successfully logged out');
+      history1.push({
+        pathname: './logoutpage',
+        data: location1.data.first_name,
+      });
+    } else {
+      alert('Todos sync not succesful');
     }
-  };
-  const logoutPage = () => {
-    console.log('You have been successfully logged out');
-    history1.push({
-      pathname: './logoutpage',
-      data: location1.data.first_name,
-    });
   };
 
   return (
@@ -167,14 +166,9 @@ const TodoPage = () => {
             {fourthSeg}
           </div>
         )}
-        <div className="save-logout">
-          <button className="save-btn btn" type="submit" onClick={saveTodo}>
-            Save
-          </button>
-          <button className="logout-btn btn" type="submit" onClick={logoutPage}>
-            Logout
-          </button>
-        </div>
+        <button className="logout-btn btn" type="submit" onClick={logoutPage}>
+          Logout
+        </button>
       </div>
     </div>
   );
